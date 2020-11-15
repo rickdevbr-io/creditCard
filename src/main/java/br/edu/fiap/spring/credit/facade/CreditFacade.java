@@ -1,5 +1,7 @@
 package br.edu.fiap.spring.credit.facade;
 
+import java.io.IOException;
+
 import org.springframework.stereotype.Service;
 
 import br.edu.fiap.spring.credit.controller.CreditCardHistoryDto;
@@ -24,6 +26,10 @@ public class CreditFacade {
 	
 	public String createMassTransactions() {
 		return creditCardHistoryService.createMassTransactions();
+	}
+	
+	public String uploadPotentialCardCustomers() throws IOException {
+		return potentialCardCustomersService.uploadPotentialCardCustomers();
 	}
 	
 }

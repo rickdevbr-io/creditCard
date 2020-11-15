@@ -1,5 +1,7 @@
 package br.edu.fiap.spring.credit.controller;
 
+import java.io.IOException;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,5 +25,10 @@ public class CreditController {
 	@PostMapping("/gerar-massa-transacoes")
 	public String createMassTransactions() {
 		return creditFacade.createMassTransactions();
+	}
+	
+	@PostMapping("/carga-clientes-potenciais")
+	public String uploadPotentialCardCustomers() throws IOException {
+		return creditFacade.uploadPotentialCardCustomers();
 	}
 }
