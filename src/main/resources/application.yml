@@ -12,4 +12,3 @@ spring:
       maximum-pool-size: 10
   jpa:
     show-sql: true
-  
