@@ -15,5 +15,15 @@ Desenvolvida uma POC dentro do contexto: "A FIAP resolveu criar seu próprio car
 # Executando o projeto :computer:
 - Passo1: Escolha escolha a pasta para download do projeto e execute o clone;
 ```
-git clone https://github.com/rickdevbr-io/gestaoagrotech.git
+git clone https://github.com/rickdevbr-io/creditCard.git
 ```
+- Passo2: Escolha escolha a pasta para download do projeto e execute o clone;
+
+- Passo3: No PostgreSQL local crie o database fiap;
+
+- Passo4: Execute o boot do projeto;
+```
+mvn run
+```
+- Passo5: Abra a documentação API http://localhost:8080/fiap-spring/swagger-ui/
+
