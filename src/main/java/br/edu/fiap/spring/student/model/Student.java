@@ -47,7 +47,7 @@ public class Student {
 	@Temporal(TemporalType.DATE)
 	private Date born;
 	
-	@Column(name = "dt_created_date")
+	@Column(name = "dt_created_date", nullable = false)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date createdDate;
 
