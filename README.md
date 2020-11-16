@@ -27,6 +27,16 @@ mvn run
 ```
 - Passo5: Abra a documentação API http://localhost:8080/fiap-spring/swagger-ui/
 
+- Passo6: No student-controller use os endpoints para cadastro, exibição e exclusão do aluno;
+
+- Passo7: Execute o post carga-clientes-potenciais para gerar massa de teste dos potenciais clientes. Duração máxima de 30 minutos.
+
+- Passo8: Execute o post gerar-massa-transacoes para criar um histórico de transação de um aluno de 30 dias.
+
+- Passo9: Execute o post recebimento-transacao para simular o recebimento de transação de um cartão.
+
+- Obs.: Caso for optado utilizar o PostgreSql Client, e não a opção com a imagem do PostgreSql via Docker, será necessário associar ao projeto o postgresql-42.2.18.jar, presente na pasta "src", assim como ter o plugin DB Browser instalado no IntelliJ.
+
 # Executando os testes unitários :arrow_forward:
 - Passo1: Escolha a pasta "spring" ou alguma em específico, pressione com o botão direito e execute os testes selecionando a opção "Run Tests in...".
 
