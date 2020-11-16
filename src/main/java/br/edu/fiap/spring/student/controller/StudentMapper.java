@@ -17,6 +17,7 @@ public abstract class StudentMapper {
 				.identification(entity.getIdentification())
 				.name(entity.getName())
 				.nickname(entity.getNickname())
+				.email(entity.getEmail())
 				.born(entity.getBorn())
 				.createdDate(entity.getCreatedDate())
 				.build();
@@ -32,6 +33,7 @@ public abstract class StudentMapper {
 				.identification(dto.getIdentification())
 				.name(dto.getName())
 				.nickname(dto.getNickname())
+				.email(dto.getEmail())
 				.born(dto.getBorn())
 				.createdDate(new Date())
 				.build();

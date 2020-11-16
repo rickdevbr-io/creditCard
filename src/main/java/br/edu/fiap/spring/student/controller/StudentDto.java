@@ -18,6 +18,7 @@ public class StudentDto {
 	private String identification;
 	private String name;
 	private String nickname;
+	private String email;
 	private Date born;
 	private Date createdDate;
 }

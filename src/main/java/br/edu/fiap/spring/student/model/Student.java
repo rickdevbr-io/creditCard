@@ -42,6 +42,9 @@ public class Student {
 	
 	@Column(name = "st_nickname", nullable = false)
 	private String nickname;
+
+	@Column(name = "st_email", nullable = false)
+	private String email;
 	
 	@Column(name = "dt_born")
 	@Temporal(TemporalType.DATE)

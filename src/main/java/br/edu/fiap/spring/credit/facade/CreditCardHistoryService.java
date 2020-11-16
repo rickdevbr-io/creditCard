@@ -3,6 +3,8 @@ package br.edu.fiap.spring.credit.facade;
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import org.springframework.stereotype.Service;
@@ -18,9 +20,7 @@ public class CreditCardHistoryService {
 	private final CreditCardHistoryRepository creditCardHistoryRepository;
 	
 	public CreditCardHistory save(CreditCardHistory creditCardHistory) {
-		
-		return creditCardHistoryRepository.save(creditCardHistory); 
-		
+		return creditCardHistoryRepository.save(creditCardHistory);
 	}
 	
 	public String createMassTransactions() {
@@ -36,6 +36,24 @@ public class CreditCardHistoryService {
 		}
 		
 		return "massa de transação criada com sucesso";
+	}
+
+	public List<CreditCardHistory> findCreditCardHistories(){
+		List<CreditCardHistory> creditCardHistory = creditCardHistoryRepository.findAll();
+
+		if(creditCardHistory.size() < 1) {
+			return new ArrayList<CreditCardHistory>();
+		}
+		return creditCardHistoryRepository.findAll();
+	}
+
+	public List<CreditCardHistory> findCreditCardHistories(int creditCardNumber){
+		List<CreditCardHistory> creditCardHistory = creditCardHistoryRepository.findByCardNumber(creditCardNumber);
+
+		if(creditCardHistory.size() < 1) {
+			return new ArrayList<CreditCardHistory>();
+		}
+		return creditCardHistory;
 	}
 	
 }

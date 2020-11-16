@@ -4,8 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.util.Date;
-import java.util.Objects;
+import java.util.*;
 
 import org.springframework.stereotype.Service;
 
@@ -54,6 +53,24 @@ public class PotentialCardCustomersService {
         
         return "carga finalizada com sucesso.";	
 	}
-	
-	
+
+	public List<PotentialCardCustomers> findPotentialCardCustomers(){
+		List<PotentialCardCustomers> potentialCardCustomers = potentialCardCustomersRepository.findAll();
+
+		if(potentialCardCustomers.size() < 1) {
+			return new ArrayList<PotentialCardCustomers>();
+		}
+		return potentialCardCustomersRepository.findAll();
+	}
+
+	public PotentialCardCustomers findPotentialCardCustomer(Long rm){
+		Optional<PotentialCardCustomers> potentialCardCustomers = potentialCardCustomersRepository.findByRm(rm);
+
+		if(potentialCardCustomers.isEmpty())
+			return new PotentialCardCustomers();
+
+		return potentialCardCustomers.get();
+	}
+
+
 }
