@@ -22,8 +22,14 @@ git clone https://github.com/rickdevbr-io/creditCard.git
 - Passo3: No PostgreSQL local crie o database fiap;
 
 - Passo4: Execute o boot do projeto;
-```
-mvn run
-```
+
 - Passo5: Abra a documentação API http://localhost:8080/fiap-spring/swagger-ui/
+
+- Passo6: No student-controller use os endpoints para cadastro, exibição e exclusão do aluno;
+
+- Passo7: Execute o post carga-clientes-potenciais para gerar massa de teste dos potenciais clientes. Duração máxima de 30 minutos.
+
+- Passo8: Execute o post gerar-massa-transacoes para criar um histórico de transação de um aluno de 30 dias.
+
+- Passo9: Execute o post recebimento-transacao para simular o recebimento de transação de um cartão.
 
