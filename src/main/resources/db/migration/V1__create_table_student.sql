@@ -5,6 +5,7 @@ create table tb_student_stud(
 	nr_registration_record int8 NOT NULL,
 	st_name varchar(100) NOT NULL,
 	st_nickname varchar(30) NOT NULL,
+	st_email varchar(256) NOT NULL,
 	dt_born date,
 	st_identification varchar(11) NOT NULL,
 	dt_created_date timestamp NOT NULL,
