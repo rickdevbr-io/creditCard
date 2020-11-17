@@ -4,7 +4,7 @@ import br.edu.fiap.spring.credit.facade.CreditCardHistoryService;
 import br.edu.fiap.spring.credit.facade.PotentialCardCustomersService;
 import br.edu.fiap.spring.credit.model.CreditCardHistory;
 import br.edu.fiap.spring.credit.model.PotentialCardCustomers;
-import br.edu.fiap.spring.email.controller.EmailDTO;
+import br.edu.fiap.spring.email.EmailDTO;
 import br.edu.fiap.spring.student.model.Student;
 import br.edu.fiap.spring.student.service.StudentService;
 import lombok.AllArgsConstructor;
@@ -102,7 +102,6 @@ public class EmailServiceImpl implements EmailService {
     public String BuildHTMLTable(String value) {
         return "<td>" + value + "</td>";
     }
-
 
     public Student GetStudent(long rm) {
         return studentService.findStudent(rm);

@@ -1,6 +1,6 @@
 package br.edu.fiap.spring.email.service;
 
-import br.edu.fiap.spring.email.controller.EmailDTO;
+import br.edu.fiap.spring.email.EmailDTO;
 
 import javax.mail.MessagingException;
 import java.io.IOException;

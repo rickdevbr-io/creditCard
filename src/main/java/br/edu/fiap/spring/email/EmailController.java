@@ -1,4 +1,4 @@
-package br.edu.fiap.spring.email.controller;
+package br.edu.fiap.spring.email;
 
 import br.edu.fiap.spring.email.service.EmailService;
 import lombok.RequiredArgsConstructor;

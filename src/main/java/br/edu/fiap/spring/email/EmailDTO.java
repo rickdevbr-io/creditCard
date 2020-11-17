@@ -1,4 +1,4 @@
-package br.edu.fiap.spring.email.controller;
+package br.edu.fiap.spring.email;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,12 +13,8 @@ import java.util.Map;
 @AllArgsConstructor
 @NoArgsConstructor
 public class EmailDTO {
-
     private Long id;
     private String to;
     private String subject;
     private String message;
-    private List<Object> attachments;
-    private Map<String, Object> props;
-
 }
