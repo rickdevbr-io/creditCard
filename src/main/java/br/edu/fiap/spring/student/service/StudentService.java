@@ -18,9 +18,9 @@ public class StudentService {
 	
 	public Student findStudent(Long rm){
 		Optional<Student> student = studentRepository.findByRm(rm);
-		
+
 		if(student.isEmpty())
-			return new Student();  
+			return new Student();
 		
 		return student.get();
 	}
