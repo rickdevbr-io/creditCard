@@ -36,6 +36,12 @@ mvn run
 - Passo9: Execute o post recebimento-transacao para simular o recebimento de transação de um cartão.
 
 - Obs.: Caso for optado utilizar o PostgreSql Client, e não a opção com a imagem do PostgreSql via Docker, será necessário associar ao projeto o postgresql-42.2.18.jar, presente na pasta "src", assim como ter o plugin DB Browser instalado no IntelliJ.
+Caso não for utilizar o postgresql.jar, certificar que as linhas a seguir não estão presentes no pom e fazer as alterações necessárias para utilizar a opção imagem no Docker:
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 
 # Executando os testes unitários :arrow_forward:
 - Passo1: Escolha a pasta "spring" ou alguma em específico, pressione com o botão direito e execute os testes selecionando a opção "Run Tests in...".
