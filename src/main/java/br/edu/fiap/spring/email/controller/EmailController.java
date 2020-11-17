@@ -1,21 +1,16 @@
 package br.edu.fiap.spring.email.controller;
 
-import br.edu.fiap.spring.credit.facade.CreditCardHistoryService;
-import br.edu.fiap.spring.credit.facade.PotentialCardCustomersService;
-import br.edu.fiap.spring.credit.model.CreditCardHistory;
-import br.edu.fiap.spring.credit.model.PotentialCardCustomers;
 import br.edu.fiap.spring.email.service.EmailService;
-import br.edu.fiap.spring.student.model.Student;
-import br.edu.fiap.spring.student.service.StudentService;
 import lombok.RequiredArgsConstructor;
-import lombok.SneakyThrows;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.mail.MessagingException;
-import java.io.IOException;
 
 @RestController
 @RequiredArgsConstructor
@@ -27,13 +22,13 @@ public class EmailController {
 
 
     @GetMapping("send-mail/{rm}")
-    public String SendEmail(@PathVariable  long rm) throws Exception {
+    public String SendEmail(@PathVariable long rm) throws Exception {
         ResponseEntity<Object> responseEntity;
 
         try {
 
             EmailDTO emailDTO = (EmailDTO) emailService.EmailBuild(rm);
-            if(emailDTO!=null)
+            if (emailDTO != null)
                 emailService.sendEmail(emailDTO);
             else
                 throw new ResponseStatusException(HttpStatus.NOT_FOUND, "entity not found");
