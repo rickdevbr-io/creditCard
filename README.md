@@ -46,3 +46,8 @@ Caso não for utilizar o postgresql.jar, certificar que as linhas a seguir não 
 # Executando os testes unitários :arrow_forward:
 - Passo1: Escolha a pasta "spring" ou alguma em específico, pressione com o botão direito e execute os testes selecionando a opção "Run Tests in...".
 
+# Executando o envio de email :computer:
+- Para realizar o envio de email é necessario ter um usuário cadastrado na tabela tb_student com RM relacionada na tabela tb_potential_card_customers_pccu e com a tabela tb_credit_card_history_cchi. O email só é enviado para o usuário que possui operações de cartão de crédito.
+- Será necessario configurar um email do gmail e senha nas properties (username: email@gmail.com, password: password) do projeto para que o envio de email funcione corretamente. 
+- No endpoint /fiap-spring/email/send-mail/{rm} informar a RM cadastrada na tabela. Caso a RM não exista, será exibido uma mensagem informando que a entidade não é valida, se ela existir será enviado o email para o email cadastrado na tabela tb_student.
+
